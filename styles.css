@@ -1,0 +1,540 @@
+/* Reset de márgenes y relleno */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuentes */
+@font-face {
+    font-family: 'Monserrat';
+    src: url(fonts/Montserrat-VariableFont_wght.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Salsa';
+    src: url(fonts/Salsa-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+container {
+    background-color: #ffe4e1; /* Fondo rosa claro */
+    padding: 0; /* Elimina padding del contenedor */
+    border-radius: 0; /* Elimina el radio de borde si es necesario */
+    border: none; /* Elimina cualquier borde */
+}
+
+section {
+    margin: 0; /* Elimina cualquier margen de la sección */
+    padding: 0; /* Elimina padding de la sección */
+}
+
+/* Estilo general del cuerpo */
+.body{
+    background-color: #fdd6e0;
+}
+
+/* Encabezado y navegación */
+header {
+    font-family: 'Salsa';
+    color: #d46a90;
+    background-color: #ffd1dc;
+    padding: 20px 0;
+}
+
+header .navbar-nav .nav-link {
+    color: #d46a90;
+    font-weight: bold;
+    font-size: 3rem !important; /* Tamaño base de la fuente */
+    margin: 0 10px; /* Espaciado entre los botones para móviles */
+}
+
+/* Aumentar tamaño de fuente y espaciado en pantallas grandes */
+@media (min-width: 768px) {
+    header .navbar-nav .nav-link {
+        font-size: 1.5rem; /* Tamaño mayor para pantallas grandes */
+        margin: 0 20px; /* Más espaciado entre los botones para tablet y PC */
+    }
+}
+
+@media (min-width: 1024px) {
+    header .navbar-nav .nav-link {
+        margin: 0 30px; /* Aún más espaciado entre los botones para pantallas grandes */
+    }
+}
+
+/* Estilo del título dentro del header */
+header .title h1 {
+    font-family: 'Salsa';
+    margin-bottom: 0;
+}
+
+header .title h2 {
+    font-size: 1.25rem; /* Tamaño del subtítulo */
+    color: #d46a90;
+}
+
+/* Aumentar tamaño del título en pantallas grandes */
+@media (min-width: 1200px) {
+    header .title h1 {
+        font-size: 7rem !important; /* Uso de !important para asegurar que se aplique el tamaño */
+    }
+}
+
+@media (min-width: 768px) {
+    header .title h1 {
+        font-size: 5rem;
+    }
+    
+    header .title h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Establecer el fondo rosa en todo el sitio */
+body, html {
+    background-color: #f8d7da; /* Tono rosa */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Línea divisora debajo del nav y del fondo de fresas */
+.divider {
+    width: 100%;
+    height: 5px;
+    background-color: #d47f9f; /* Mismo tono rosa para la línea */
+    margin: 0 auto;
+}
+
+/* Estilo del logo */
+.logo {
+    max-width: 100px;
+    height: auto;
+}
+header {
+    background-color: #f8d7da; /* Tono rosa */
+    position: relative; /* Necesario para posicionar los elementos hijos de forma absoluta */
+    overflow: hidden; /* Asegura que la imagen de fresas no se desborde */
+    padding-bottom: 10px; /* Espacio adicional para la línea divisora */
+}
+
+
+/* Contenedor de la imagen de fresas */
+.enclosing-frame {
+    position: absolute; /* Fija la imagen al borde inferior */
+    bottom: 0; /* Pegado al borde inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: auto;
+    z-index: 1;
+}
+
+/* Contenedor del título y el logo */
+.title {
+    position: relative; /* Mantiene el contenedor en su lugar */
+    text-align: center;
+    padding: 40px 20px; /* Espaciado interno para el texto y el logo */
+    background-color: #f8d7da; /* Tono rosa */
+    z-index: 2; /* Asegura que el título esté por encima del fondo */
+    padding-bottom: 80px; /* Espacio para la imagen de fresas */
+}
+
+/* Contenedor del logo */
+.logo-container {
+    position: relative;
+    top: -30px; /* Ajusta la posición del logo si es necesario */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3; /* Asegura que el logo esté por encima del título y del fondo */
+    margin-bottom: 20px; /* Espacio debajo del logo */
+}
+
+/* Logo */
+.header-logo {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Títulos */
+
+.title h1, .title h2 {
+    font-family: 'Salsa';
+    color: #d47f9f; /* Tono rosa */
+    position: relative;
+    z-index: 2;
+    margin-bottom: 600px; /* Espacio debajo del título */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .title h1, .title h2 {
+        font-family: 'Salsa';
+        color: #d47f9f; /* Tono rosa */
+        position: relative;
+        z-index: 2;
+        margin-bottom: 150px; /* Espacio debajo del título */
+    }
+}
+
+@media (min-width: 1200px) {
+    .header-logo {
+        max-width: 15%;
+    }
+}
+
+
+/* Estilo de la sección de portafolio */
+
+.recent-work {
+    background-color: #f8d7da; /* Tono rosa */
+    padding-top: 20px;
+    z-index: 1; /* Asegura que el portafolio esté detrás del título */
+}
+
+.recent-work h2 {
+    font-size: 6rem;
+    color: #d47f9f; /* Tono rosa */
+    font-family: 'Salsa';
+}
+
+/* Ajuste de los botones con imagen */
+.work-item {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+}
+
+.work-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.work-item span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    font-size: 1.2rem;
+    color: white;
+}
+
+.work-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .header-logo {
+        max-width: 45%;
+    }
+
+    .title h1 {
+        font-size: 1.75rem;
+    }
+
+    .title h2 {
+        font-size: 1.25rem;
+    }
+
+    .enclosing-frame {
+        top: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header-logo {
+        max-width: 15%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* portafolio */
+
+/* Color de fondo rosa para el header */
+header .title {
+    background-color: #fdd6e0 !important; /* Cambia el color de fondo del header */
+}
+
+/* Color del texto en el header */
+header .title h1 {
+    color: #d47f9f; /* Cambia el color del texto a rosa */
+    font-size: 2rem; /* Asegúrate de que el tamaño sea adecuado */
+}
+
+@media (min-width: 768px) {
+    header .title h1 {
+        font-size: 5rem; /* Tamaño para pantallas más grandes */
+    }
+}
+
+body, .bg-pink, .container, .header, .main, .footer  {
+    background-color: #fdd6e0 !important;
+}
+
+/* Otros elementos que podrían tener un fondo diferente */
+header, nav, .scroll-container, .btn-outline-pink {
+    background-color: #fdd6e0 !important;
+}
+
+/* Ajustar colores de fondo específicos */
+.scroll-container img, .btn-outline-pink {
+    background-color: transparent;
+}
+
+
+/* Secciones con scroll horizontal */
+.scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scroll-container .row {
+    flex-wrap: nowrap;
+}
+
+.scroll-container .col-4 {
+    min-width: 250px;
+    flex: 0 0 auto;
+}
+
+.scroll-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.scroll-container img:last-child {
+    margin-right: 0;
+}
+
+/* Clases de texto personalizado */
+.text-pink {
+    font-size: medium;
+    color: #d47f9f;
+}
+
+/* Botones personalizados */
+.btn-outline-pink { /* Cambio aquí */
+    font-family: 'Salsa';
+    font-size: 2rem;
+    color: #d47f9f;
+    border-color: #d47f9f;
+}
+
+.btn-outline-pink:hover {
+    background-color: #d47f9f;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .scroll-container .col-4 {
+        min-width: 100%;
+    }
+}
+
+#portafolio h2 {
+    font-size: 3rem; /* Tamaño de 2rem */
+    color: #d47f9f; /* Color rosa */
+    font-family: 'Salsa', cursive;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    #portafolio h2 {
+        font-size: 1.75rem; /* Tamaño reducido para pantallas pequeñas */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ajuste de la sección "Sobre Mí" */
+#sobre-mi img {
+    max-width: 400px; /* Aumenta el tamaño máximo de la imagen */
+    border: 5px solid #d47f9f;
+    width: 100%; /* Asegura que la imagen sea responsiva */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 auto; /* Centra la imagen en su contenedor */
+}
+
+#sobre-mi .highlighted{
+    color: #d47f9f;
+    font-family: ;
+    font-weight: bold;
+    font-size: 2rem; /* Ajusta el tamaño del texto destacado */
+}
+#sobre-mi p {
+    color: #000000;
+    font-family: 'Monserrat';
+    font-weight: bold;
+    font-size: 2rem; /* Ajusta el tamaño del texto destacado */
+}
+
+/* Sección "Contacto" */
+.contact-icon {
+    margin-left: 30px;
+    width: 50px;
+    height: 50px;
+}
+
+.contact-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+#contacto h2 {
+    font-family: 'Salsa';
+    font-size: 5rem; /* Cambia el tamaño del título de contacto */
+}
+
+#contacto p {
+    font-size: 2rem; /* Cambia el tamaño del texto de contacto */
+}
+
+/* Media Queries para mantener la responsividad */
+@media (max-width: 768px) {
+    #sobre-mi .col-md-6 {
+        text-align: center;
+    }
+
+    #sobre-mi img {
+        margin-bottom: 20px;
+    }
+
+    #contacto h2 {
+        font-size: 2.5rem; /* Ajusta el tamaño del título en pantallas más pequeñas */
+    }
+
+    #contacto p {
+        font-size: 1.8rem; /* Ajusta el tamaño del texto en pantallas más pequeñas */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* all sections */
+body {
+    background-color: #ffe4e1; /* Fondo rosa claro */
+    margin: 0; /* Elimina márgenes alrededor de la página */
+}
+
+.navbar {
+    background-color: #fdd6e0; /* Fondo rosa claro de la barra de navegación */
+}
+
+.nav-link {
+    color: #ff69b4; /* Color de los enlaces */
+}
+
+.nav-link:hover {
+    color: #d46a90; /* Color de los enlaces al pasar el ratón */
+}
+
+.text-pink {
+    color: #ff69b4; /* Color rosa para títulos */
+}
+
+h1 {
+    font-family: 'Salsa', sans-serif;
+    color: #ff69b4;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.row-cols-md-3 .col {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-top: 20px;
+}
+
+.container {
+    background-color: #ffe4e1; /* Cambiar fondo blanco a rosa claro */
+    padding: 20px;
+    border-radius: 10px;
+}
